@@ -25,7 +25,10 @@ export default IndexPage
 
 export const pageQuery = graphql`  
   query IndexQuery {
-    allStrapiProject {
+    allStrapiProject(
+      filter: { published: { eq: true } }
+      sort: { fields: [createdAt], order: ASC }
+    ) {
       edges {
         node {
           id

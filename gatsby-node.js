@@ -8,7 +8,6 @@ const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
       if (result.errors) {
         reject(result.errors)
       }
-      
       return result;
     })
   )
